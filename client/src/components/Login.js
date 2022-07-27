@@ -28,6 +28,14 @@ function Login() {
         })
     }
 
+
+    // const logout = () => {
+    //   fetch('/logout'), {
+    //     method: 'DELETE'
+    //   }.then(localStorage.clear)
+      
+    // }
+
     return (
       <>
       <h1>Login</h1>
@@ -42,6 +50,7 @@ function Login() {
       </label>
       <input type="submit" value="Login!" />
     </form>
+    {/* <button onClick={()=>logout}>Logout</button> */}
     </>
     );
   }
