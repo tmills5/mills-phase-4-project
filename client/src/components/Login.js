@@ -26,13 +26,13 @@ function Login() {
             console.log(json)
             if(json.errors) setErrors(json.errors)
         })
+        console.log(errors)
         setUsername('');
         setPassword('');
     }
 
 
     const logout = () => {
-      console.log("user")
       fetch('/logout', {
         method: 'DELETE'
       })
@@ -53,7 +53,7 @@ function Login() {
       </label>
       <input type="submit" value="Login!" />
     </form>
-    <button onClick={()=>logout}>Logout</button>
+    <button onClick={logout}>Logout</button>
     </>
     );
   }

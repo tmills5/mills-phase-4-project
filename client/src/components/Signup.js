@@ -24,6 +24,7 @@ function Signup() {
         console.log(json)
         if(json.errors) setErrors(Object.entries(json.errors))
       })
+      console.log(errors)
       setUsername('');
       setPassword('');
   }

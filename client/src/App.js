@@ -6,16 +6,16 @@ import Home from './components/Home';
 import Signup from './components/Signup';
 
 function App() {
-  const [trails, setTrails] = useState([])
-  const [errors, setErrors] = useState(false)
+  const [parks, setParks] = useState([])
+  // const [errors, setErrors] = useState(false)
 
-  const [isAuthenticated, setIsAuthenticated] = useState(false);
-  const [user, setUser] = useState(null);
+  // const [isAuthenticated, setIsAuthenticated] = useState(false);
+  // const [user, setUser] = useState(null);
 
   useEffect(() => {
-    fetch('/users')
-    .then(res => res.json())
-    .then(setTrails)
+    // fetch('/users')
+    // .then(res => res.json())
+    // .then(setTrails)
   },[]);
 
   return (
@@ -23,7 +23,7 @@ function App() {
       <Routes>
 
         <Route exact path='/' element={<Home /> } />
-        <Route exact path='/signup' element={<Signup setUser={setUser} />} />
+        <Route exact path='/signup' element={<Signup />} />
 
       </Routes>
     </div>
