@@ -1,9 +1,12 @@
+User.destroy_all
+
+
 puts "Seeding...."
 
 5.times do
   User.create(
-    name: Faker::name,
-    password: 123
+    name: Faker::Name.first_name,
+    password: "123"
   )
 end
 

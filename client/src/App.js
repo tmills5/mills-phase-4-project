@@ -14,18 +14,32 @@ function App() {
   // const [isAuthenticated, setIsAuthenticated] = useState(false);
   // const [user, setUser] = useState(null);
 
-  useEffect(() => {
-    // fetch('/users')
-    // .then(res => res.json())
-    // .then(setTrails)
-  },[]);
+  // useEffect(() => {
+  //   const options = {
+  //     method: 'GET',
+  //     headers: {
+  //       'X-Api-Key': 'YQqHROTp15773aO6ZRsDCaFKX3WTEWbKqFf71V8e',
+  //       'X-RapidAPI-Key': '9a9f03145bmsh082d0e7cede4082p1cd3a7jsn6c2d29c82494',
+  //       'X-RapidAPI-Host': 'jonahtaylor-national-park-service-v1.p.rapidapi.com'
+  //     }
+  //   };
+    
+  //   fetch('https://jonahtaylor-national-park-service-v1.p.rapidapi.com/parks?stateCode=ga', options)
+  //     .then(response => response.json())
+  //     .then(parksInitial => {
+  //       console.log(parksInitial)
+  //       setParks(parksInitial)
+  //     })
+  //     .catch(err => console.error(err));
+      
+  // },[]);
 
   return (
     <div className="App">
       <Navigation />
       <Routes>
 
-        <Route exact path='/' element={<Home /> } />
+        <Route exact path='/' element={<Home parks={parks} /> } />
         <Route exact path='/signup' element={<Signup />} />
         <Route exact path='/login' element={<Login />} />
 
