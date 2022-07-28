@@ -23,18 +23,19 @@ function Login() {
         })
         .then(res => res.json())
         .then(json => {
-            console.log(json)
+            // console.log(json)
             if(json.errors) setErrors(json.errors)
         })
     }
 
 
-    // const logout = () => {
-    //   fetch('/logout'), {
-    //     method: 'DELETE'
-    //   }.then(localStorage.clear)
+    const logout = (user) => {
+      console.log(user)
+      fetch('/logout', {
+        method: 'DELETE'
+      })
       
-    // }
+    }
 
     return (
       <>
@@ -50,7 +51,7 @@ function Login() {
       </label>
       <input type="submit" value="Login!" />
     </form>
-    {/* <button onClick={()=>logout}>Logout</button> */}
+    <button onClick={logout}>Logout</button>
     </>
     );
   }
