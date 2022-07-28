@@ -1,4 +1,6 @@
 import React, { useState } from "react";
+import { Link } from 'react-router-dom';
+
 
 function Signup() {
   const [username, setUsername] = useState('')
@@ -22,11 +24,14 @@ function Signup() {
         console.log(json)
         if(json.errors) setErrors(Object.entries(json.errors))
       })
+      setUsername('');
+      setPassword('');
   }
+
   return (
       <> 
       <h1>Sign UP</h1>
-      <form onSubmit={onSubmit}>
+      <form onSubmit={onSubmit} >
       <label>
         Username
  
@@ -40,6 +45,7 @@ function Signup() {
      
       <input type="submit" value="Sign up!" />
     </form>
+    <Link to='/'>Home</Link>
       </>
   )
 }

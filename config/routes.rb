@@ -1,7 +1,9 @@
 Rails.application.routes.draw do
   resources :users, only:[:create]
   get '/users', to: 'users#index'
+  get '/signup', to:'users#create'
   get '/authorized_user', to: 'users#show'
+  
 
   #logging in and logging out
   post "/login", to: "sessions#login"

@@ -1,7 +1,8 @@
 import './App.css';
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
+import { Routes, Route } from 'react-router-dom';
 
-import Login from './components/Login';
+import Home from './components/Home';
 import Signup from './components/Signup';
 
 function App() {
@@ -19,8 +20,12 @@ function App() {
 
   return (
     <div className="App">
-      <Login setUser={setUser} setIsAuthenticated = {setIsAuthenticated} user={user}/>
-      <Signup setUser={setUser} />
+      <Routes>
+
+        <Route exact path='/' element={<Home /> } />
+        <Route exact path='/signup' element={<Signup setUser={setUser} />} />
+
+      </Routes>
     </div>
   );
 }
