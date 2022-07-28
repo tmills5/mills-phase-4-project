@@ -18,7 +18,7 @@ function App() {
   //   const options = {
   //     method: 'GET',
   //     headers: {
-  //       'X-Api-Key': 'YQqHROTp15773aO6ZRsDCaFKX3WTEWbKqFf71V8e',
+  //       'X-Api-Key': ' ',
   //       'X-RapidAPI-Key': '9a9f03145bmsh082d0e7cede4082p1cd3a7jsn6c2d29c82494',
   //       'X-RapidAPI-Host': 'jonahtaylor-national-park-service-v1.p.rapidapi.com'
   //     }
